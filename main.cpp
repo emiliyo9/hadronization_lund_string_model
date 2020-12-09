@@ -9,8 +9,7 @@
 
 int main()
 {
-    //double E_cm = 0.317;
-    double E_cm = 306;
+    double E_cm = 1000;
 
     TRandom3 *r = new TRandom3();
     
@@ -23,8 +22,7 @@ int main()
     out_b.open("output_breakpoints.txt");
 
     Shower* s;
-    for (int i = 0; i < 100; i++) {
-        std::cout << i << std::endl;
+    for (int i = 0; i < 1000; i++) {
         int fl_rand = r->Integer(fl.size());
         int cl_rand = r->Integer(cl.size());
         Quark q(fl[fl_rand], cl[cl_rand]);
